@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styletask_list.css' %}">
+  </head>
+  <body>
+      <div id="wrapper">
+        <div class="container">
+          <h2>Your Will To List</h2>
+          <table id="haveToTable" style="width:75%">
+            <caption>Have To</caption>
+            <tr>
+              <th colspan="4">Task</th>
+              <th width=15%>Due Date</th>
+              <th colspan="4">Notes</th>
+              <th width=10%>Complete</th>
+            </tr>
+            
+            <tr>
+                <td class="task_name_one" colspan="4">{{task_name}}</td>
+                <td class="due_date_one" width=15%>{{due_date}}</td>
+                <td class="score_one" colspan="4">{{notes}}</td>
+                <td class="input_one" width=10%><input type="checkbox"></td>
+            </tr>
+          <button id="new_task_button"><a href="new_task">Create Task</a></button>
+          <button id="logout_button"><a href="logout">Logout</a></button>
+        </div>
+      </div>
+  </body>
+</html>
